@@ -1,6 +1,6 @@
  import{useState} from "react";
  export default function Practice(){
-    const MyData
+    const MyData="lknoiio"
     return(
         <div>Promise</div>
     )
