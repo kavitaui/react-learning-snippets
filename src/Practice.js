@@ -2,6 +2,6 @@
  export default function Practice(){
     const MyData="lknoiio"
     return(
-        <div>Promise</div>
+        <div>Promise lkdfhslhf</div>
     )
 }
