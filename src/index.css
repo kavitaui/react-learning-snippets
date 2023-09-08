@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.cal-icon img,svg{
+ 
+vertical-align:left;
+  position: absolute;
+  margin-top: -27px;
+  margin-left: 500px;
+}
+
+.form-control{
+  position:relative;
+}
