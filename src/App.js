@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
-
+import MyModal from './MyModal.js';
 function App() {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ function App() {
         </a>
       </header>
       <Practice/>
+      <MyModal/>
     </div>
   );
 }
