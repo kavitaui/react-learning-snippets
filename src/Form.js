@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FcCalendar } from "react-icons/fc";
 import 'react-calendar/dist/Calendar.css';
 export default function Form() {
-    const [sucessMsg, setSucessMsg] = useState("")
+    const [sucessMsg, setSucessMsg] = useState("");
     const [formData, setFormData] = useState({
         fname: '',
         lname: '',
@@ -40,7 +40,7 @@ export default function Form() {
             }, 3000);
         }
         else {
-            setSucessMsg("form is not valid")
+            setSucessMsg("form is not valid");
         }
     }
     const handleChange = (e) => {
@@ -165,7 +165,7 @@ export default function Form() {
                         {show && <Calendar onChange={setDate} value={date} name="Avilability" />}</div>
 
                     <button type="submit " className="custom-button mt-2" onClick={handleSubmit}>Check Avilability</button>
-                    <p className="message">{sucessMsg.length ? 'sucessMsg' : null}</p>
+                    <p className="message">{sucessMsg.length ? sucessMsg : null}</p>
                 </form>
             </div>
         </div>
