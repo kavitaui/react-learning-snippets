@@ -17,11 +17,12 @@ export default function Form() {
         lname: '',
         cars: '',
         email: '',
-        calendar: '',
+      
         Date: ''
     })
 
     const handleSubmit = (e) => {
+        debugger;
         e.preventDefault();
         if (formValidation()) {
             setSucessMsg("Thank you for sharing details!!, we will get back to you soon.");
@@ -30,7 +31,7 @@ export default function Form() {
                 lname: '',
                 cars: '',
                 email: '',
-                calendar: '',
+               
                 Date: '',
 
             })
@@ -78,12 +79,12 @@ export default function Form() {
         else {
             newErrors.email = '';
         }
-        if (formData.calendar.trim() === '') {
-            newErrors.calendar = 'select the required date';
+        if (formData.Date.trim() === '') {
+            newErrors.Date = 'select the required date';
             isValid = false;
         }
         else {
-            newErrors.calendar = ''
+            newErrors.Date = ''
         }
         setError(newErrors);
         return isValid;
@@ -101,15 +102,15 @@ export default function Form() {
     const formatDate = (d) => {
         if (!d) return '';
         var month = '' + (d.getMonth() + 1);
-        var day = '' + d.getDay();
+        var day =  '' + d.getDate();
         var year = d.getFullYear();
         if (month.length < 2) {
             month = '0' + month;
         }
         if (day.length < 2) {
-            day = '0' + day;
+            day =  '0'+ day;
         }
-        return [month, day, year].join('/');
+        return [day, month, year].join('/');
     }
 
 
@@ -163,8 +164,8 @@ export default function Form() {
                         <span className="cal-icon w-60" > <FcCalendar /></span>
                         {show && <Calendar onChange={setDate} value={date} name="Avilability" />}</div>
 
-                    <button type="submit mt-2" className="custom-button" onClick={handleSubmit}>Check Avilability</button>
-                    <p className="message">{sucessMsg.length ? 'message' : null}</p>
+                    <button type="submit " className="custom-button mt-2" onClick={handleSubmit}>Check Avilability</button>
+                    <p className="message">{sucessMsg.length ? 'sucessMsg' : null}</p>
                 </form>
             </div>
         </div>
