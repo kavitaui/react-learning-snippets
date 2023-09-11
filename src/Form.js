@@ -12,7 +12,7 @@ export default function Form() {
         calendar: '',
         Date: ''
     });
-    const[error,setErrors]=useState({
+    const[error,setError]=useState({
         fname: '',
         lname: '',
         cars: '',
@@ -41,9 +41,17 @@ export default function Form() {
             setSucessMsg("form is not valid")
         }
     }
-    
+    const handleChange=(e)=>{
+const name= e.target.name;
+const value= e.target.value;
+setFormData((prevData)=>({
+    ...prevData,
+    [name]:value
+}))
+formValidation();
+} 
    const formValidation=()=>{
-    const isValid = true;
+    let isValid = true;
     const newErrors ={...error}
     if(newErrors.fname.trim()===''){
         newErrors.fname='fname is required';
@@ -73,7 +81,7 @@ export default function Form() {
     else{
         newErrors.calendar=''
     }
-    setErrors(newErrors);
+    setError(newErrors);
 return isValid;
 
    }
@@ -106,10 +114,11 @@ return isValid;
             <div className="row px-5 py-5">
                 Form:
                 <form>
-                    <div><label for="fname" className="form-label"><h5>FNAME:</h5></label>
-                        <input type="fname" className="form-control" id="exampleFormCintrolInput1" placeholder="fname" />
-                        <label for="lname" className="form-label"><h5>LNAME:</h5></label>
-                        <input type="lname" className="form-control" id="exampleFormCintrolInput1" placeholder="lname" /></div>
+                    <div><label for="fname"  className="form-label"><h5>FNAME:</h5></label>
+                        <input type="fname" onChange={handleChange} className={`form-control ${error.fname.length?'error-field':''} ${formData.fname?'sucess':''}`} id="exampleFormCintrolInput1" placeholder="fname" />
+                       <p className="popup">{error.fname.length>0?error.fname:null}</p>
+                       <label for="lname" className="form-label"><h5>LNAME:</h5></label>
+                        <input type="lname"  className="form-control" id="exampleFormCintrolInput1" placeholder="lname" /></div>
 
                     <label for="exampleFormControlSelect1">Example Multiple Select Cars:</label>
                     <div className="form-group ">
