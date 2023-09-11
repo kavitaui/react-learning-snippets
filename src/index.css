@@ -23,6 +23,16 @@ vertical-align:left;
   position:relative;
 }
 .error-field{
-  border:red;
-  border-radius:2px;
+  border:2px solid red !important;
+  border-radius:2px !important;
+}
+.sucess{
+  border:2px solid green !important;
+  border-radius: 2px !important;
+}
+.message{
+  color: green;
+}
+.popup{
+  color:red;
 }
