@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
-
+import Home from './home';
+import MyData from './MyData';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,9 @@ function App() {
         </a>
       </header>
       <Practice/>
+      <MyData/>
+      <Home/>
+     
     </div>
   );
 }
