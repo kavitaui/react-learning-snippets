@@ -1,7 +1,9 @@
 
 import { useState, useEffect } from "react";
-
+import MyContext from './MyContext';
 import axios from "axios";
+import Home from './Home';
+import MyPage from './MyPage';
 export default function MyData() {
    
     const [jsonData, setJsonData] = useState();
@@ -28,7 +30,12 @@ export default function MyData() {
 
     return (
         <div>
-        {JSON.stringify(jsonData)}</div>
-        )
+        {JSON.stringify(jsonData)}
+       <MyContext.Provider value={jsonData}>
+        <Home/>
+      <MyPage/>
+       </MyContext.Provider>
+      
+      </div> )
        
     }   

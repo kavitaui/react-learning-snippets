@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
-import Home from './Home';
+
 import MyData from './MyData';
-import MyPage from './MyPage';
+
+
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
         </a>
       </header>
       <Practice/>
+    
       <MyData/>
-      <Home/>
-      <MyPage/>
+     
+  
      
     </div>
   );
