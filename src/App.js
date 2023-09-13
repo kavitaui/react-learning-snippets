@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
-import Home from './home';
+import Home from './Home';
 import MyData from './MyData';
+import MyPage from './MyPage';
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
       <Practice/>
       <MyData/>
       <Home/>
+      <MyPage/>
      
     </div>
   );
