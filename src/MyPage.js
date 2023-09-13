@@ -5,7 +5,7 @@ export default function MyPage(){
     return(
         <div> 
          <h4> {contextData.name}</h4>
-         <p></p> 
+         <p>{contextData.Project1.mypractice}</p> 
         </div>
     )
 }

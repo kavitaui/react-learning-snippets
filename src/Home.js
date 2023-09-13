@@ -6,7 +6,7 @@ export default function Home(){
         <div>
             <h3>{contextData.title}
             </h3>
-            <p>{contextData.subtitle}</p>
+            <p>{contextData.subtitle}</p> 
         </div>
     )
 }
