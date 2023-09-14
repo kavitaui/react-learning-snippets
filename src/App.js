@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
+import StopWatch from './Stopwatch';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header>
       <Practice/>
+      <StopWatch/>
     </div>
   );
 }
