@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Practice from './Practice';
+import Crousel from './AnimationCrousel';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header>
       <Practice/>
+      <Crousel/>
     </div>
   );
 }
