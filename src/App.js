@@ -3,6 +3,10 @@ import './App.css';
 import Practice from './Practice';
 import AnimationCrousel from './AnimationCrousel';
 
+import LearnProps from './LearnProps';
+
+
+
 function App() {
   return (
     <div className="App">
@@ -22,6 +26,8 @@ function App() {
       </header>
       <Practice/>
       <AnimationCrousel />
+     
+      <LearnProps/>
       
     </div>
   );

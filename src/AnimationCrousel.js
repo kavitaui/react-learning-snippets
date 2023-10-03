@@ -1,18 +1,35 @@
+
 import Mycard from "./Mycard";
 export default function AnimationCrousel() {
-
-    let box = document.querySelector('.product-container');
+   
+   
+    let box;
+    const interval = setInterval(()=>{
+         box = document.querySelector('.product-container');
+        if (box){
+          clearInterval(interval);
+        }
+    }, 1000)
     const btnpressprev = () => {
+        debugger;
+        if(!box) return;
         let width = box.clientWidth;
-        box.scrollLeft = box.scrollLeft - width;
-        console.log(width)
+        if(width === box.scrollLeft){
+            box.scrollLeft =  0;
+        }else{
+            box.scrollLeft =  box.scrollLeft - 300;
+        }
+        
+        //console.log(width)
     }
     const btnpressnxt = () => {
+        if(!box) return;
+        debugger;
         let width = box.clientWidth;
-        box.scrollLeft = box.scrollLeft + width;
-        console.log(width);
+        box.scrollLeft = box.scrollLeft + width; 
+       // console.log(width);
     }
-
+    
     return (
         <div className="product-crousel">
             <button className="prev-btn" onClick={btnpressprev}>&lt;<p></p></button>
