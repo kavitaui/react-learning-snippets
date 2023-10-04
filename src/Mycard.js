@@ -9,7 +9,7 @@ export default function Mycard(props) {
     // }, [props])
     return (
         <div className="mycard">
-            
+            hello kavita
         </div>
     );
 }
