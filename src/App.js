@@ -3,7 +3,7 @@ import './App.css';
 import Practice from "./Practice";
 import AnimationCrousel from "./AnimationCrousel";
 import LearnProps from './LearnProps';
-
+import Slider from "./Componants/slider/Slider";
 
 
 
@@ -30,6 +30,7 @@ function App() {
      
       <LearnProps/> 
       
+      <Slider/>
     </div>
   );
 }
