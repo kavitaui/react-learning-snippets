@@ -40,6 +40,8 @@ const Slider = () => {
     debugger;
   }, [currentSlide]);
 
+  //check
+
   return (
     <div className="slider">
       <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
@@ -49,7 +51,7 @@ const Slider = () => {
           <div
             className={index === currentSlide ? "slide current" : "slide"}
             key={index}
-          >
+          > 
             {index === currentSlide && (
               <div>
                 <img src={slide.image} alt="slide" className="image" />
