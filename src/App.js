@@ -4,6 +4,7 @@ import Practice from "./Practice";
 import AnimationCrousel from "./AnimationCrousel";
 import LearnProps from './LearnProps';
 import Slider from "./Componants/slider/Slider";
+import MyAutoSlide from './MyAutoSlide';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <AnimationCrousel />
      
       <LearnProps/> 
+      <MyAutoSlide/>
       
       <Slider/>
     </div>
