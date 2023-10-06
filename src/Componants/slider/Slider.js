@@ -40,7 +40,7 @@ const Slider = () => {
     debugger;
   }, [currentSlide]);
 
-  //check
+  
 
   return (
     <div className="slider">
